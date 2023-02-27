@@ -95,7 +95,7 @@ public class AdvancedPageControlDrawerParent {
     func getCenteredXPosition(_ rect: CGRect, itemPos: CGFloat, dotSize: CGFloat, space: CGFloat, numberOfPages: Int) -> CGFloat {
         let individualDotPos = (itemPos * (dotSize + space))
         let halfViewWidth = (rect.width / 2)
-        let halfAlldotsWidthWithSpaces = ((CGFloat(numberOfPages) * (dotSize + (space - 1))) / 2.0)
+        let halfAlldotsWidthWithSpaces = (CGFloat(numberOfPages) * (dotSize + space) - space) / 2.0
         return individualDotPos - halfAlldotsWidthWithSpaces + halfViewWidth
     }
 
